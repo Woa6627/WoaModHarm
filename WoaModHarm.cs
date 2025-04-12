@@ -38,6 +38,7 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(SelfDestructionMessages));
         Harmony.PatchAll(typeof(PlayerControllerPatch));
         Harmony.PatchAll(typeof(EnemyHeadChaseOffsetPatch));
+        Harmony.PatchAll(typeof(EnemyGnomePatch));
         NotifyPatchers(Harmony);
     }
 
