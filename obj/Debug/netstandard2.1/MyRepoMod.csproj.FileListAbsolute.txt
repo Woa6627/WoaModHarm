@@ -1,0 +1,8 @@
+D:\WoaModHarm\bin\Debug\netstandard2.1\MyRepoMod.deps.json
+D:\WoaModHarm\bin\Debug\netstandard2.1\MyRepoMod.dll
+D:\WoaModHarm\obj\Debug\netstandard2.1\MyRepoMod.csproj.AssemblyReference.cache
+D:\WoaModHarm\obj\Debug\netstandard2.1\MyRepoMod.GeneratedMSBuildEditorConfig.editorconfig
+D:\WoaModHarm\obj\Debug\netstandard2.1\MyRepoMod.AssemblyInfoInputs.cache
+D:\WoaModHarm\obj\Debug\netstandard2.1\MyRepoMod.AssemblyInfo.cs
+D:\WoaModHarm\obj\Debug\netstandard2.1\MyRepoMod.csproj.CoreCompileInputs.cache
+D:\WoaModHarm\obj\Debug\netstandard2.1\MyRepoMod.dll

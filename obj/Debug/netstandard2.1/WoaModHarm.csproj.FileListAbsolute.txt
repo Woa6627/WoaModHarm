@@ -1,0 +1,8 @@
+D:\WoaModHarm\bin\Debug\netstandard2.1\WoaModHarm.deps.json
+D:\WoaModHarm\bin\Debug\netstandard2.1\WoaModHarm.dll
+D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.csproj.AssemblyReference.cache
+D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.GeneratedMSBuildEditorConfig.editorconfig
+D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.AssemblyInfoInputs.cache
+D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.AssemblyInfo.cs
+D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.csproj.CoreCompileInputs.cache
+D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.dll
