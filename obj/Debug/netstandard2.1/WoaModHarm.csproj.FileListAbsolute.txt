@@ -6,3 +6,4 @@ D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.AssemblyInfoInputs.cache
 D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.AssemblyInfo.cs
 D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.csproj.CoreCompileInputs.cache
 D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.dll
+D:\WoaModHarm\obj\Debug\netstandard2.1\WoaModHarm.sourcelink.json

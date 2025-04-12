@@ -32,7 +32,6 @@ public class WoaModHarm : BaseUnityPlugin
     internal void Patch()
     {
         Harmony ??= new Harmony(Info.Metadata.GUID);
-        Harmony.PatchAll(typeof(ExamplePlayerControllerPatch));
         Harmony.PatchAll(typeof(LevelText));
         Harmony.PatchAll(typeof(BuildVersion));
         Harmony.PatchAll(typeof(FlashlightControllerPatch));
@@ -40,8 +39,6 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(PlayerControllerPatch));
         Harmony.PatchAll(typeof(EnemyHeadChaseOffsetPatch));
         NotifyPatchers(Harmony);
-        //SynchronizeUpgradesPatchers(Harmony);
-        //Harmony.PatchAll(typeof(HaulModify));
     }
 
     internal void NotifyPatchers(Harmony Harmony)
@@ -55,13 +52,6 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(NotifyHeadmanSpawn));
         Harmony.PatchAll(typeof(NotifyHiddenSpawn));
     }
-
-    internal void SynchronizeUpgradesPatchers(Harmony Harmony)
-    {
-        Harmony.PatchAll(typeof(RunManagerPatch));
-        Harmony.PatchAll(typeof(StatsManagerPatch));
-    }
-
     internal void Unpatch()
     {
         Harmony?.UnpatchSelf();
