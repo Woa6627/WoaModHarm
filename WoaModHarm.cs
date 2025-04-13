@@ -6,7 +6,7 @@ using WoaRepoMod;
 
 namespace WoaModHarm;
 
-[BepInPlugin("Woa.WoaRepoHarm", "WoaRepoHarm", "0.0.5")]
+[BepInPlugin("Woa.WoaRepoHarm", "WoaRepoHarm", "0.0.6")]
 public class WoaModHarm : BaseUnityPlugin
 {
     internal static WoaModHarm Instance { get; private set; } = null!;
@@ -39,6 +39,7 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(PlayerControllerPatch));
         Harmony.PatchAll(typeof(EnemyHeadChaseOffsetPatch));
         Harmony.PatchAll(typeof(EnemyGnomePatch));
+        Harmony.PatchAll(typeof(GoalUIPatch));
         NotifyPatchers(Harmony);
     }
 
