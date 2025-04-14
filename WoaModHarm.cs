@@ -16,7 +16,10 @@ public class WoaModHarm : BaseUnityPlugin
     private ManualLogSource _logger => base.Logger;
     internal Harmony? Harmony { get; set; }
     public static System.Version? Version;
+
+    #region Music
     public static AssetBundle mainMenuMusic = AssetBundle.LoadFromFile(Path.Combine(Paths.PluginPath, "mainmenumusic.woa"));
+
     public static AudioClip stealth = mainMenuMusic.LoadAsset<AudioClip>("msc main menu");
     public static AudioClip on_hover = mainMenuMusic.LoadAsset<AudioClip>("menu hover");
     public static AudioClip on_select = mainMenuMusic.LoadAsset<AudioClip>("menu select");
@@ -26,6 +29,13 @@ public class WoaModHarm : BaseUnityPlugin
     public static AudioClip special = mainMenuMusic.LoadAsset<AudioClip>("special");
     public static AudioClip txcr = mainMenuMusic.LoadAsset<AudioClip>("txcr");
     public static AudioClip doll_scream = mainMenuMusic.LoadAsset<AudioClip>("spigun");
+    #endregion
+
+#region SFX
+    public static AssetBundle sfx = AssetBundle.LoadFromFile(Path.Combine(Paths.PluginPath, "sfx.woa"));
+    public static AudioClip huntsmanShotFired = sfx.LoadAsset<AudioClip>("slst");
+
+#endregion
 
     private void Awake()
     {
@@ -82,6 +92,7 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(ConstantMusicPatch));
         Harmony.PatchAll(typeof(MenuManagerPatch));
         Harmony.PatchAll(typeof(ScreamingDollPatch));
+        Harmony.PatchAll(typeof(EnemyHunterAudioPatch));
     }
 
     static void EnemyPatchers(Harmony Harmony)
