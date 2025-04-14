@@ -34,6 +34,15 @@ public class WoaModHarm : BaseUnityPlugin
 #region SFX
     public static AssetBundle sfx = AssetBundle.LoadFromFile(Path.Combine(Paths.PluginPath, "sfx.woa"));
     public static AudioClip huntsmanShotFired = sfx.LoadAsset<AudioClip>("slst");
+    public static AudioClip a101 = sfx.LoadAsset<AudioClip>("a101");
+    public static AudioClip a102 = sfx.LoadAsset<AudioClip>("a102");
+    public static AudioClip a103 = sfx.LoadAsset<AudioClip>("a103");
+    public static AudioClip a104 = sfx.LoadAsset<AudioClip>("a104");
+    public static AudioClip a105 = sfx.LoadAsset<AudioClip>("a105");
+    public static AudioClip a106 = sfx.LoadAsset<AudioClip>("a106");
+    public static AudioClip a107 = sfx.LoadAsset<AudioClip>("a107");
+    public static AudioClip a108 = sfx.LoadAsset<AudioClip>("a108");
+    public static AudioClip FUCK = sfx.LoadAsset<AudioClip>("FUCK");
 
 #endregion
 
@@ -70,6 +79,10 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(NotifyHeadmanSpawn));
         Harmony.PatchAll(typeof(NotifyHiddenSpawn));
         Harmony.PatchAll(typeof(NotifyDuckSpawn));
+        Harmony.PatchAll(typeof(NotifyBeamerSpawn));
+        Harmony.PatchAll(typeof(NotifyThinManSpawn));
+        Harmony.PatchAll(typeof(NotifyCeilingEyeSpawn));
+        Harmony.PatchAll(typeof(NotifyUpScreamSpawn));
     }
 
     static void UIPatchers(Harmony Harmony)
@@ -93,6 +106,8 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(MenuManagerPatch));
         Harmony.PatchAll(typeof(ScreamingDollPatch));
         Harmony.PatchAll(typeof(EnemyHunterAudioPatch));
+        Harmony.PatchAll(typeof(EnemyDuckAudioPatch));
+        Harmony.PatchAll(typeof(EnemyBeamerAudioPatch));
     }
 
     static void EnemyPatchers(Harmony Harmony)
