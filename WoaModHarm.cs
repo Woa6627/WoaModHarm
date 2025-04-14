@@ -8,7 +8,7 @@ using WoaRepoMod;
 
 namespace WoaModHarm;
 
-[BepInPlugin("Woa.WoaRepoHarm", "WoaRepoHarm", "0.0.6")]
+[BepInPlugin("Woa.WoaRepoHarm", "WoaRepoHarm", "0.1.0")]
 public class WoaModHarm : BaseUnityPlugin
 {
     internal static WoaModHarm Instance { get; private set; } = null!;
@@ -25,6 +25,7 @@ public class WoaModHarm : BaseUnityPlugin
     public static AudioClip afghan = mainMenuMusic.LoadAsset<AudioClip>("hz_afghan");
     public static AudioClip special = mainMenuMusic.LoadAsset<AudioClip>("special");
     public static AudioClip txcr = mainMenuMusic.LoadAsset<AudioClip>("txcr");
+    public static AudioClip doll_scream = mainMenuMusic.LoadAsset<AudioClip>("spigun");
 
     private void Awake()
     {
@@ -58,6 +59,7 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(NotifySlowMouthSpawn));
         Harmony.PatchAll(typeof(NotifyHeadmanSpawn));
         Harmony.PatchAll(typeof(NotifyHiddenSpawn));
+        Harmony.PatchAll(typeof(NotifyDuckSpawn));
     }
 
     static void UIPatchers(Harmony Harmony)
@@ -79,6 +81,7 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(RemovePitch));
         Harmony.PatchAll(typeof(ConstantMusicPatch));
         Harmony.PatchAll(typeof(MenuManagerPatch));
+        Harmony.PatchAll(typeof(ScreamingDollPatch));
     }
 
     static void EnemyPatchers(Harmony Harmony)
