@@ -3,6 +3,7 @@ using System.IO;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using Unity.VisualScripting;
 using UnityEngine;
 using WoaRepoMod;
 
@@ -43,6 +44,12 @@ public class WoaModHarm : BaseUnityPlugin
     public static AudioClip a107 = sfx.LoadAsset<AudioClip>("a107");
     public static AudioClip a108 = sfx.LoadAsset<AudioClip>("a108");
     public static AudioClip FUCK = sfx.LoadAsset<AudioClip>("FUCK");
+    public static AudioClip ambient_iseeu = sfx.LoadAsset<AudioClip>("potthinmanroam");
+    public static AudioClip teethchatter1 = sfx.LoadAsset<AudioClip>("teethchatter1");
+    public static AudioClip teethchatter2 = sfx.LoadAsset<AudioClip>("teethchatter2");
+    public static AudioClip teethchatter3 = sfx.LoadAsset<AudioClip>("teethchatter3");
+    public static AudioClip radioREQ = sfx.LoadAsset<AudioClip>("radioREQ");
+    public static AudioClip ahhhhh = sfx.LoadAsset<AudioClip>("ahhhhhh");
 
 #endregion
 
@@ -56,6 +63,14 @@ public class WoaModHarm : BaseUnityPlugin
         Patch();
 
         Logger.LogInfo($"{Info.Metadata.GUID} v{Info.Metadata.Version} has loaded!");
+    }
+
+    void Start()
+    {
+        Debug.Log("Loaded Start");
+        GameObject UI = new GameObject("WoaUI");
+        UI.AddComponent<WoaUI>();
+        DontDestroyOnLoad(UI);
     }
 
     internal void Patch()
@@ -108,6 +123,10 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(EnemyHunterAudioPatch));
         Harmony.PatchAll(typeof(EnemyDuckAudioPatch));
         Harmony.PatchAll(typeof(EnemyBeamerAudioPatch));
+        Harmony.PatchAll(typeof(AmbienceBreakersPatch));
+        Harmony.PatchAll(typeof(ItemDuckAudioPatch));
+        Harmony.PatchAll(typeof(EnemyHeadManAudioPatch));
+        Harmony.PatchAll(typeof(ValuableRadioAudioPatch));
     }
 
     static void EnemyPatchers(Harmony Harmony)

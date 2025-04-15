@@ -25,7 +25,7 @@ public class ConstantMusicPatch
             }
             AudioClip[] songs = {WoaModHarm.WoaModHarm.stealth, WoaModHarm.WoaModHarm.special, WoaModHarm.WoaModHarm.afghan, WoaModHarm.WoaModHarm.betrayal, WoaModHarm.WoaModHarm.txcr};
             int index = UnityEngine.Random.Range(0, songs.Length);
-            __instance.clip = songs[index];
+            __instance.clip = WoaModHarm.WoaModHarm.special;
             __instance.volume = LevelGenerator.Instance.Level.ConstantMusicPreset.volume;
             return false;
         }catch(Exception ex)
