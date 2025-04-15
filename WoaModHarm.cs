@@ -9,7 +9,7 @@ using WoaRepoMod;
 
 namespace WoaModHarm;
 
-[BepInPlugin("Woa.WoaRepoHarm", "WoaRepoHarm", "0.1.0")]
+[BepInPlugin("Woa.WoaRepoHarm", "WoaRepoHarm", "0.1.1")]
 public class WoaModHarm : BaseUnityPlugin
 {
     internal static WoaModHarm Instance { get; private set; } = null!;
