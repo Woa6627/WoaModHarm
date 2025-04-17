@@ -133,6 +133,7 @@ public class WoaModHarm : BaseUnityPlugin
     {
         Harmony.PatchAll(typeof(EnemyHeadChaseOffsetPatch));
         Harmony.PatchAll(typeof(EnemyGnomePatch));
+        Harmony.PatchAll(typeof(EnemyHeadFloatPatch));
     }
     internal void Unpatch()
     {

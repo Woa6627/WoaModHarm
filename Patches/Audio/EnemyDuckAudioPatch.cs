@@ -10,6 +10,8 @@ public class EnemyDuckAudioPatch
     public static void DuckSFXPatch(EnemyDuckAnim __instance)
     {
         __instance.quackSound.Sounds[0] = WoaModHarm.WoaModHarm.FUCK;
+        __instance.quackSound.Sounds[1] = WoaModHarm.WoaModHarm.FUCK;
+        __instance.quackSound.Sounds[2] = WoaModHarm.WoaModHarm.FUCK;
         __instance.noticeSound.Sounds[0] = WoaModHarm.WoaModHarm.FUCK;
     }
 }
