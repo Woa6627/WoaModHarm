@@ -5,7 +5,7 @@
     <LangVersion>11</LangVersion>
     <Nullable>enable</Nullable>
     <Authors>Woa</Authors>
-    <Version>0.1.1</Version>
+    <Version>0.1.5</Version>
   </PropertyGroup>
 
   <!-- Add Package Sources -->
