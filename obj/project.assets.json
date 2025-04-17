@@ -2916,10 +2916,11 @@
     ]
   },
   "packageFolders": {
-    "D:\\Nuget": {}
+    "D:\\Nuget": {},
+    "D:\\Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.1.1",
+    "version": "0.1.5",
     "restore": {
       "projectUniqueName": "D:\\WoaModHarm\\WoaModHarm.csproj",
       "projectName": "WoaModHarm",
@@ -2927,8 +2928,12 @@
       "packagesPath": "D:\\Nuget",
       "outputPath": "D:\\WoaModHarm\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\reece\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
