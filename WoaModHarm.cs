@@ -9,7 +9,7 @@ using WoaRepoMod;
 
 namespace WoaModHarm;
 
-[BepInPlugin("Woa.WoaRepoHarm", "WoaRepoHarm", "0.1.5")]
+[BepInPlugin("Woa.WoaRepoHarm", "WoaRepoHarm", "0.1.6")]
 public class WoaModHarm : BaseUnityPlugin
 {
     internal static WoaModHarm Instance { get; private set; } = null!;
@@ -30,6 +30,7 @@ public class WoaModHarm : BaseUnityPlugin
     public static AudioClip special = mainMenuMusic.LoadAsset<AudioClip>("special");
     public static AudioClip txcr = mainMenuMusic.LoadAsset<AudioClip>("txcr");
     public static AudioClip doll_scream = mainMenuMusic.LoadAsset<AudioClip>("spigun");
+    public static AudioClip gramaphone_music = mainMenuMusic.LoadAsset<AudioClip>("gramaphone");
     #endregion
 
 #region SFX
@@ -127,6 +128,7 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(ItemDuckAudioPatch));
         Harmony.PatchAll(typeof(EnemyHeadManAudioPatch));
         Harmony.PatchAll(typeof(ValuableRadioAudioPatch));
+        Harmony.PatchAll(typeof(ItemGramaphoneAudioPatch));
     }
 
     static void EnemyPatchers(Harmony Harmony)
