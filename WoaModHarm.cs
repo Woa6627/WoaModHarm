@@ -16,8 +16,8 @@ public class WoaModHarm : BaseUnityPlugin
     internal static WoaModHarm Instance { get; private set; } = null!;
     internal new static ManualLogSource Logger => Instance._logger;
     private ManualLogSource _logger => base.Logger;
-    internal Harmony? Harmony { get; set; }
-    public static System.Version? Version;
+    internal Harmony Harmony { get; set; }
+    public static System.Version Version;
 
     #region Music
     public static AssetBundle mainMenuMusic = AssetBundle.LoadFromFile(Path.Combine(Paths.PluginPath, "mainmenumusic.woa"));
@@ -66,6 +66,7 @@ public class WoaModHarm : BaseUnityPlugin
         Settings.mainmenumusic = Config.Bind("MUSIC", "mainmenumusic", true, "Enable or disable main menu music");
         Settings.mainmenusfx = Config.Bind("UI", "mainmenusfx", true, "Enable or disable UI sound effects");
         Settings.mainmenumusic = Config.Bind("GAME", "customsoundeffects", true, "Enable or disable custom sound effects");
+        Logger.Log(LogLevel.Info, "Config File Path: "+ Config.ConfigFilePath);
         Patch();
 
 
