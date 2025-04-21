@@ -8,6 +8,7 @@ public class EnemyHunterAudioPatch
     [HarmonyPostfix, HarmonyPatch(nameof(EnemyHunter.Awake))]
     public static void ShootSoundSfxPatch(EnemyHunter __instance)
     {
-        __instance.soundShoot.Sounds[0] = WoaModHarm.WoaModHarm.huntsmanShotFired;
+        if(Settings.customsfx.Value)
+            __instance.soundShoot.Sounds[0] = WoaModHarm.WoaModHarm.huntsmanShotFired;
     }
 }

@@ -5,6 +5,7 @@ using HarmonyLib;
 using UnityEngine;
 using Microsoft.Extensions.Configuration;
 using BepInEx.Configuration;
+#pragma warning disable CS8618
 
 
 [HarmonyPatch(typeof(ConstantMusic))]
@@ -35,6 +36,7 @@ public class ConstantMusicPatch
             return false;
         }catch(Exception ex)
         {
+            WoaModHarm.WoaModHarm.Logger.Log(BepInEx.Logging.LogLevel.Error, ex.Message);
             return true;
         }
     }

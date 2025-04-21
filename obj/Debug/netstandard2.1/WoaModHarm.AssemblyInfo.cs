@@ -51,7 +51,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Woa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.6.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.6+031d1656427254aef885f169ec2ebc2ccbb4b891")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.6+9c21ceaa4039e8abaeeae6eba33028f0952beec1")]
 [assembly: System.Reflection.AssemblyProductAttribute("WoaModHarm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WoaModHarm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.6.0")]

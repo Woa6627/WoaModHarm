@@ -8,17 +8,20 @@ public class MenuManagerPatch
     [HarmonyPostfix, HarmonyPatch(nameof(MenuManager.Start))]
     public static void StartPatch(MenuManager __instance)
     {
-        __instance.soundHover.Sounds[0] = WoaModHarm.WoaModHarm.on_hover;
-        __instance.soundConfirm.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-        __instance.soundDeny.Sounds[0] = WoaModHarm.WoaModHarm.silence;
-        __instance.soundAction.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-        __instance.soundTick.Sounds[0] = WoaModHarm.WoaModHarm.silence;
-        __instance.soundDud.Sounds[0] = WoaModHarm.WoaModHarm.silence;
-        __instance.soundPageOutro.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-        __instance.soundPageIntro.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-        __instance.soundWindowPopUp.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-        __instance.soundWindowPopUpClose.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-        __instance.soundMove.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
+        if(Settings.mainmenusfx.Value)
+        {
+            __instance.soundHover.Sounds[0] = WoaModHarm.WoaModHarm.on_hover;
+            __instance.soundConfirm.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
+            __instance.soundDeny.Sounds[0] = WoaModHarm.WoaModHarm.silence;
+            __instance.soundAction.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
+            __instance.soundTick.Sounds[0] = WoaModHarm.WoaModHarm.silence;
+            __instance.soundDud.Sounds[0] = WoaModHarm.WoaModHarm.silence;
+            __instance.soundPageOutro.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
+            __instance.soundPageIntro.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
+            __instance.soundWindowPopUp.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
+            __instance.soundWindowPopUpClose.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
+            __instance.soundMove.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
+        }
     }
 
     [HarmonyPrefix, HarmonyPatch(nameof(MenuManager.MenuEffectHover))]

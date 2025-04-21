@@ -19,8 +19,12 @@ public class EnemyBeamerAudioPatch
             WoaModHarm.WoaModHarm.a108
         };
         int index = UnityEngine.Random.Range(0, clips.Length);
-        __instance.soundAttackLoop.Sounds[0] = clips[index];
-        __instance.soundAttackIntro.Sounds[0] = clips[index];
-        __instance.soundAttackOutro.Sounds[0] = clips[index];
+        if(Settings.customsfx.Value)
+        {
+            __instance.soundAttackLoop.Sounds[0] = clips[index];
+            __instance.soundAttackIntro.Sounds[0] = clips[index];
+            __instance.soundAttackOutro.Sounds[0] = clips[index];
+        }
+
     }
 }

@@ -63,7 +63,9 @@ public class WoaModHarm : BaseUnityPlugin
         // Prevent the plugin from being deleted
         this.gameObject.transform.parent = null;
         this.gameObject.hideFlags = HideFlags.HideAndDontSave;
-        Settings.mainmenumusic = Config.Bind("Settings", "mainmenumusic", true, "Enable or disable main menu music");
+        Settings.mainmenumusic = Config.Bind("MUSIC", "mainmenumusic", true, "Enable or disable main menu music");
+        Settings.mainmenusfx = Config.Bind("UI", "mainmenusfx", true, "Enable or disable UI sound effects");
+        Settings.mainmenumusic = Config.Bind("GAME", "customsoundeffects", true, "Enable or disable custom sound effects");
         Patch();
 
 
