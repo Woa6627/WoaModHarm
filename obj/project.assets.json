@@ -3749,7 +3749,7 @@
     "D:\\Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.1.6",
+    "version": "0.1.8",
     "restore": {
       "projectUniqueName": "D:\\WoaModHarm\\WoaModHarm.csproj",
       "projectName": "WoaModHarm",
