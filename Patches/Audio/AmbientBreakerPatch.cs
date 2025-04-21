@@ -5,7 +5,7 @@ using UnityEngine;
 [HarmonyPatch(typeof(AmbienceBreakers))]
 public class AmbienceBreakersPatch
 {
-    [HarmonyPostfix, HarmonyPatch(nameof(AmbienceBreakers.Awake))]
+    [HarmonyPostfix, HarmonyPatch(nameof(AmbienceBreakers.Start))]
     public static void AmbienceBreakersSFXPatch(AmbienceBreakers __instance)
     {
         if(Settings.customsfx.Value)
