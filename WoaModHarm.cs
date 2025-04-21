@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using Unity.VisualScripting;
@@ -54,6 +55,7 @@ public class WoaModHarm : BaseUnityPlugin
 
 #endregion
 
+
     private void Awake()
     {
         Instance = this;
@@ -61,7 +63,9 @@ public class WoaModHarm : BaseUnityPlugin
         // Prevent the plugin from being deleted
         this.gameObject.transform.parent = null;
         this.gameObject.hideFlags = HideFlags.HideAndDontSave;
+        Settings.mainmenumusic = Config.Bind("Settings", "mainmenumusic", true, "Enable or disable main menu music");
         Patch();
+
 
         Logger.LogInfo($"{Info.Metadata.GUID} v{Info.Metadata.Version} has loaded!");
     }

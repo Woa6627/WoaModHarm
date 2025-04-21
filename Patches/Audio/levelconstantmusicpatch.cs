@@ -3,10 +3,14 @@ using System.IO;
 using BepInEx;
 using HarmonyLib;
 using UnityEngine;
+using Microsoft.Extensions.Configuration;
+using BepInEx.Configuration;
+
 
 [HarmonyPatch(typeof(ConstantMusic))]
 public class ConstantMusicPatch
 {
+    
 
     public ConstantMusicPatch()
     {
@@ -16,8 +20,9 @@ public class ConstantMusicPatch
     [HarmonyPrefix, HarmonyPatch(nameof(ConstantMusic.Setup))]
     public static bool ConstantMusicSetupPatch(ConstantMusic __instance)
     {
-        try{
 
+        try{
+            if(!Settings.mainmenumusic.Value) return true;
             if (!LevelGenerator.Instance.Level.ConstantMusicPreset)
             {
                 __instance.gameObject.SetActive(false);

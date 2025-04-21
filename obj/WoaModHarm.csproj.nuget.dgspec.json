@@ -74,6 +74,18 @@
               "target": "Package",
               "version": "[*, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "R.E.P.O.GameLibs.Steam": {
               "suppressParent": "All",
               "target": "Package",
