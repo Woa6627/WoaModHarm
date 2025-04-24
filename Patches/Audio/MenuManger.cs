@@ -1,6 +1,7 @@
 using HarmonyLib;
 using BepInEx;
 using UnityEngine;
+using WoaModHarm;
 
 [HarmonyPatch(typeof(MenuManager))]
 public class MenuManagerPatch
@@ -10,17 +11,17 @@ public class MenuManagerPatch
     {
         if(Settings.mainmenusfx.Value)
         {
-            __instance.soundHover.Sounds[0] = WoaModHarm.WoaModHarm.on_hover;
-            __instance.soundConfirm.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-            __instance.soundDeny.Sounds[0] = WoaModHarm.WoaModHarm.silence;
-            __instance.soundAction.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-            __instance.soundTick.Sounds[0] = WoaModHarm.WoaModHarm.silence;
-            __instance.soundDud.Sounds[0] = WoaModHarm.WoaModHarm.silence;
-            __instance.soundPageOutro.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-            __instance.soundPageIntro.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-            __instance.soundWindowPopUp.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-            __instance.soundWindowPopUpClose.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
-            __instance.soundMove.Sounds[0] = WoaModHarm.WoaModHarm.on_select;
+            __instance.soundHover.Sounds[0] = Revo.on_hover;
+            __instance.soundConfirm.Sounds[0] = Revo.on_select;
+            __instance.soundDeny.Sounds[0] = Revo.silence;
+            __instance.soundAction.Sounds[0] = Revo.on_select;
+            __instance.soundTick.Sounds[0] = Revo.silence;
+            __instance.soundDud.Sounds[0] = Revo.silence;
+            __instance.soundPageOutro.Sounds[0] = Revo.on_select;
+            __instance.soundPageIntro.Sounds[0] = Revo.on_select;
+            __instance.soundWindowPopUp.Sounds[0] = Revo.on_select;
+            __instance.soundWindowPopUpClose.Sounds[0] = Revo.on_select;
+            __instance.soundMove.Sounds[0] = Revo.on_select;
         }
     }
 

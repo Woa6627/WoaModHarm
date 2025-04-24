@@ -8,6 +8,6 @@ public class ValuableRadioAudioPatch
     public static void TrapRadioSFXLOOPPatch(TrapRadio __instance)
     {
         if(Settings.customsfx.Value)
-            __instance.RadioLoop.Sounds[0] = WoaModHarm.WoaModHarm.radioREQ;
+            __instance.RadioLoop.Sounds[0] = WoaModHarm.Revo.radioREQ;
     }
 }

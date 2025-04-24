@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8/ycvk9uW2E=",
+  "dgSpecHash": "/houiXrcBi8=",
   "success": true,
-  "projectFilePath": "D:\\WoaModHarm\\WoaModHarm.csproj",
+  "projectFilePath": "D:\\WoaModHarm\\Revo.csproj",
   "expectedPackageFiles": [
     "D:\\Nuget\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
     "D:\\Nuget\\bepinex.assemblypublicizer.msbuild\\0.4.1\\bepinex.assemblypublicizer.msbuild.0.4.1.nupkg.sha512",

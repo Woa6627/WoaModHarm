@@ -10,10 +10,10 @@ using WoaRepoMod;
 
 namespace WoaModHarm;
 
-[BepInPlugin("Woa.WoaRepoHarm", "WoaRepoHarm", "0.1.8")]
-public class WoaModHarm : BaseUnityPlugin
+[BepInPlugin("Woa.Revo", "Revo", "0.1.8")]
+public class Revo : BaseUnityPlugin
 {
-    internal static WoaModHarm Instance { get; private set; } = null!;
+    internal static Revo Instance { get; private set; } = null!;
     internal new static ManualLogSource Logger => Instance._logger;
     private ManualLogSource _logger => base.Logger;
     internal Harmony Harmony { get; set; }
@@ -89,6 +89,7 @@ public class WoaModHarm : BaseUnityPlugin
         NotifyPatchers(Harmony);
         EnemyPatchers(Harmony);
         AudioPatchers(Harmony);
+        ItemPatches(Harmony);
     }
 
     static void NotifyPatchers(Harmony Harmony)
@@ -136,6 +137,11 @@ public class WoaModHarm : BaseUnityPlugin
         Harmony.PatchAll(typeof(EnemyHeadManAudioPatch));
         Harmony.PatchAll(typeof(ValuableRadioAudioPatch));
         Harmony.PatchAll(typeof(ItemGramaphoneAudioPatch));
+    }
+
+    static void ItemPatches(Harmony Harmony)
+    {
+        Harmony.PatchAll(typeof(ItemHeartPotionPatch));
     }
 
     static void EnemyPatchers(Harmony Harmony)

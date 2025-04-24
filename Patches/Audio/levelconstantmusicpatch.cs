@@ -5,6 +5,7 @@ using HarmonyLib;
 using UnityEngine;
 using Microsoft.Extensions.Configuration;
 using BepInEx.Configuration;
+using WoaModHarm;
 #pragma warning disable CS8618
 
 
@@ -29,14 +30,14 @@ public class ConstantMusicPatch
                 __instance.gameObject.SetActive(false);
                 return false;
             }
-            AudioClip[] songs = {WoaModHarm.WoaModHarm.stealth, WoaModHarm.WoaModHarm.special, WoaModHarm.WoaModHarm.afghan, WoaModHarm.WoaModHarm.betrayal, WoaModHarm.WoaModHarm.txcr};
+            AudioClip[] songs = {Revo.stealth, Revo.special, Revo.afghan, Revo.betrayal, Revo.txcr};
             int index = UnityEngine.Random.Range(0, songs.Length);
-            __instance.clip = WoaModHarm.WoaModHarm.special;
+            __instance.clip = Revo.special;
             __instance.volume = LevelGenerator.Instance.Level.ConstantMusicPreset.volume;
             return false;
         }catch(Exception ex)
         {
-            WoaModHarm.WoaModHarm.Logger.Log(BepInEx.Logging.LogLevel.Error, ex.Message);
+            Revo.Logger.Log(BepInEx.Logging.LogLevel.Error, ex.Message);
             return true;
         }
     }

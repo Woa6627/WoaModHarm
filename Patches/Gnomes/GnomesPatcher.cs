@@ -9,7 +9,7 @@ public class EnemyGnomePatch
     {
         if (SemiFunc.IsMasterClientOrSingleplayer() && SemiFunc.EnemySpawn(__instance.enemy))
 		{
-            WoaModHarm.WoaModHarm.Logger.LogDebug("Hijacked Gnome Spawner");
+            WoaModHarm.Revo.Logger.LogDebug("Hijacked Gnome Spawner");
 		}
         return false;
     }

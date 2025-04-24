@@ -9,6 +9,6 @@ public class EnemyHunterAudioPatch
     public static void ShootSoundSfxPatch(EnemyHunter __instance)
     {
         if(Settings.customsfx.Value)
-            __instance.soundShoot.Sounds[0] = WoaModHarm.WoaModHarm.huntsmanShotFired;
+            __instance.soundShoot.Sounds[0] = WoaModHarm.Revo.huntsmanShotFired;
     }
 }

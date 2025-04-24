@@ -1,6 +1,7 @@
 using HarmonyLib;
 using BepInEx;
 using UnityEngine;
+using WoaModHarm;
 
 [HarmonyPatch(typeof(EnemyBeamerAnim))]
 public class EnemyBeamerAudioPatch
@@ -9,14 +10,14 @@ public class EnemyBeamerAudioPatch
     public static void BeamerSFXPatch(EnemyBeamerAnim __instance)
     {
         AudioClip[] clips = {
-            WoaModHarm.WoaModHarm.a101,
-            WoaModHarm.WoaModHarm.a102,
-            WoaModHarm.WoaModHarm.a103,
-            WoaModHarm.WoaModHarm.a104,
-            WoaModHarm.WoaModHarm.a105,
-            WoaModHarm.WoaModHarm.a106,
-            WoaModHarm.WoaModHarm.a107,
-            WoaModHarm.WoaModHarm.a108
+            Revo.a101,
+            Revo.a102,
+            Revo.a103,
+            Revo.a104,
+            Revo.a105,
+            Revo.a106,
+            Revo.a107,
+            Revo.a108
         };
         int index = UnityEngine.Random.Range(0, clips.Length);
         if(Settings.customsfx.Value)

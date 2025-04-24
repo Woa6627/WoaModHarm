@@ -1,1 +1,1 @@
-dotnet build .\WoaModHarm.csproj
+dotnet build .\Revo.csproj

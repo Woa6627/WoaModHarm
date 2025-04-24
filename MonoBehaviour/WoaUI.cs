@@ -16,7 +16,8 @@ public class WoaUI : MonoBehaviour
         if(!showWindow) return;
         PlayerController player = FindAnyObjectByType<PlayerController>();
         GUI.Box(new Rect(20, 20,200, 120), "Woa UI");
-        GUI.Label(new Rect(40, 50, 200, 20), $"is Moving {player.moving}");
+        if(player != null)
+            GUI.Label(new Rect(40, 30, 200, 20), $"is Moving {player.moving}");
         if(GUI.Button(new Rect(40, 60, 160, 30), "Test"))
         {
             Debug.Log("Button Clicked");

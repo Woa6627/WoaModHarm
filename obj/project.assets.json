@@ -3751,9 +3751,9 @@
   "project": {
     "version": "0.1.8",
     "restore": {
-      "projectUniqueName": "D:\\WoaModHarm\\WoaModHarm.csproj",
-      "projectName": "WoaModHarm",
-      "projectPath": "D:\\WoaModHarm\\WoaModHarm.csproj",
+      "projectUniqueName": "D:\\WoaModHarm\\Revo.csproj",
+      "projectName": "Revo",
+      "projectPath": "D:\\WoaModHarm\\Revo.csproj",
       "packagesPath": "D:\\Nuget",
       "outputPath": "D:\\WoaModHarm\\obj\\",
       "projectStyle": "PackageReference",

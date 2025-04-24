@@ -11,10 +11,10 @@ public class EnemyDuckAudioPatch
     {
         if(Settings.customsfx.Value)
         {
-            __instance.quackSound.Sounds[0] = WoaModHarm.WoaModHarm.FUCK;
-            __instance.quackSound.Sounds[1] = WoaModHarm.WoaModHarm.FUCK;
-            __instance.quackSound.Sounds[2] = WoaModHarm.WoaModHarm.FUCK;
-            __instance.noticeSound.Sounds[0] = WoaModHarm.WoaModHarm.FUCK;
+            __instance.quackSound.Sounds[0] = WoaModHarm.Revo.FUCK;
+            __instance.quackSound.Sounds[1] = WoaModHarm.Revo.FUCK;
+            __instance.quackSound.Sounds[2] = WoaModHarm.Revo.FUCK;
+            __instance.noticeSound.Sounds[0] = WoaModHarm.Revo.FUCK;
         }
     }
 }
