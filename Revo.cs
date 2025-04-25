@@ -125,7 +125,7 @@ public class Revo : BaseUnityPlugin
 
     static void AudioPatchers(Harmony Harmony)
     {
-        //Harmony.PatchAll(typeof(RemovePitch));
+        Harmony.PatchAll(typeof(RemovePitch));
         Harmony.PatchAll(typeof(ConstantMusicPatch));
         Harmony.PatchAll(typeof(MenuManagerPatch));
         Harmony.PatchAll(typeof(ScreamingDollPatch));
