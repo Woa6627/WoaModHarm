@@ -17,7 +17,8 @@ public class ItemHeartPotionPatch
             "{playerName} makes me so wet a tsunami starts",
             "I could take {playerName} so deeply",
             "I have no gag reflex... {playerName}",
-            "{playerName} will you be my Joe Goldberg?"
+            "{playerName} will you be my Joe Goldberg?",
+            "I am celibate, but i would 100% nut in {playerName}"
 		};
 		string text = list[UnityEngine.Random.Range(0, list.Count)];
 		string text2 = text.Replace("{playerName}", __instance.playerName);

@@ -52,6 +52,7 @@ public class Revo : BaseUnityPlugin
     public static AudioClip teethchatter3 = sfx.LoadAsset<AudioClip>("teethchatter3");
     public static AudioClip radioREQ = sfx.LoadAsset<AudioClip>("radioREQ");
     public static AudioClip ahhhhh = sfx.LoadAsset<AudioClip>("ahhhhhh");
+    public static AudioClip PussyPoggerConverted = sfx.LoadAsset<AudioClip>("PussyPoggersConverted");
 
 #endregion
 
@@ -107,6 +108,7 @@ public class Revo : BaseUnityPlugin
         Harmony.PatchAll(typeof(NotifyThinManSpawn));
         Harmony.PatchAll(typeof(NotifyCeilingEyeSpawn));
         Harmony.PatchAll(typeof(NotifyUpScreamSpawn));
+        Harmony.PatchAll(typeof(NotifyTumberSpawn));
     }
 
     static void UIPatchers(Harmony Harmony)
@@ -137,6 +139,7 @@ public class Revo : BaseUnityPlugin
         Harmony.PatchAll(typeof(EnemyHeadManAudioPatch));
         Harmony.PatchAll(typeof(ValuableRadioAudioPatch));
         Harmony.PatchAll(typeof(ItemGramaphoneAudioPatch));
+        Harmony.PatchAll(typeof(EnemyThinManAudioPatch));
     }
 
     static void ItemPatches(Harmony Harmony)
