@@ -8,7 +8,7 @@ public class ScreamingDollPatch
     [HarmonyPostfix, HarmonyPatch(nameof(ScreamDollValuable.Start))]
     public static void DollSFXPatch(ScreamDollValuable __instance)
     {
-        if(Settings.customsfx.Value)
-            __instance.soundScreamLoop.Sounds[0] = WoaModHarm.Revo.doll_scream;
+        
+        __instance.soundScreamLoop.Sounds[0] = WoaModHarm.Revo.doll_scream;
     }
 }

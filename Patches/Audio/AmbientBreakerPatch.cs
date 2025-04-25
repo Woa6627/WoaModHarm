@@ -8,7 +8,7 @@ public class AmbienceBreakersPatch
     [HarmonyPostfix, HarmonyPatch(nameof(AmbienceBreakers.Start))]
     public static void AmbienceBreakersSFXPatch(AmbienceBreakers __instance)
     {
-        if(Settings.customsfx.Value)
-            __instance.sound.Sounds.AddItem(WoaModHarm.Revo.ambient_iseeu);
+
+        __instance.sound.Sounds.AddItem(WoaModHarm.Revo.ambient_iseeu);
     }
 }

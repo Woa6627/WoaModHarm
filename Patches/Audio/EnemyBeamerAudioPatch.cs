@@ -20,12 +20,10 @@ public class EnemyBeamerAudioPatch
             Revo.a108
         };
         int index = UnityEngine.Random.Range(0, clips.Length);
-        if(Settings.customsfx.Value)
-        {
-            __instance.soundAttackLoop.Sounds[0] = clips[index];
-            __instance.soundAttackIntro.Sounds[0] = clips[index];
-            __instance.soundAttackOutro.Sounds[0] = clips[index];
-        }
+
+        __instance.soundAttackLoop.Sounds[0] = clips[index];
+        __instance.soundAttackIntro.Sounds[0] = clips[index];
+        __instance.soundAttackOutro.Sounds[0] = clips[index];
 
     }
 }
